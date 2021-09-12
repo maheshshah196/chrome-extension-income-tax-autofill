@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "income tax e-Filling Login feature extender",
+    "version": "1.0.0",
+    "description": "This chrome extension adds autocomplete feature to userid textfield",
+    "icons": {
+        "16": "icon-16.png",
+        "32": "icon-32.png",
+        "48": "icon-48.png",
+        "128": "icon-128.png"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://eportal.incometax.gov.in/iec/foservices/*"
+            ],
+            "js": [
+                "jquery-3.6.0.min.js",
+                "content-script.js"
+            ]
+        }
+    ],
+    "host_permissions": ["https://eportal.incometax.gov.in/"]
+}
